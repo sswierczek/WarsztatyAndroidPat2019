@@ -10,6 +10,13 @@ buildscript {
                 glide         : '4.9.0',
                 koin          : '1.0.2'
         ]
+
+        testVersions = [
+                junit        : '4.12',
+                kluent       : '1.48',
+                mockitoKotlin: '2.1.0',
+                androidx     : '2.0.+'
+        ]
     }
 
     repositories {

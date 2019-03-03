@@ -8,6 +8,6 @@ class HomeApiClient(retrofit: Retrofit) {
 
     private val service = retrofit.create(HomeApiService::class.java)
 
-    fun listHomeItems(): Call<List<HomeItem>> =
+    fun fetchHomeItems(): Call<List<HomeItem>> =
         service.listHomeItems()
 }

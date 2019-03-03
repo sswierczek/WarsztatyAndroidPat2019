@@ -30,7 +30,7 @@ class HomeViewModel(private val client: HomeApiClient) : ViewModel() {
 
     private fun fetchItems() {
         loading.value = true
-        itemsCall = client.listHomeItems().apply { enqueue(itemsResponseCallback) }
+        itemsCall = client.fetchHomeItems().apply { enqueue(itemsResponseCallback) }
     }
 
     private fun handleSuccess(homeItems: List<HomeItem>?) {
