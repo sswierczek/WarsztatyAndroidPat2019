@@ -2,7 +2,6 @@ package com.intive.warsztatyandroid.home.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import com.intive.warsztatyandroid.home.model.api.retrofit.HomeApiClient
 import com.intive.warsztatyandroid.home.model.data.HomeItem
 import retrofit2.Call
@@ -56,13 +55,4 @@ class HomeViewModel(private val client: HomeApiClient) : ViewModel() {
             handleSuccess(response.body())
         }
     }
-
-    @Suppress("UNCHECKED_CAST")
-    class Factory(private val homeApiClient: HomeApiClient) : ViewModelProvider.Factory {
-        override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            return HomeViewModel(homeApiClient) as T
-        }
-    }
 }
-
-
